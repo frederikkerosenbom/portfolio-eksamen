@@ -1,1 +1,6 @@
-/***menu****/
+body {
+  background-color: var(--bg-color-beige);
+}
+h3 {
+  font-size: 25px;
+}
