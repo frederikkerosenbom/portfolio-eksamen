@@ -1,5 +1,5 @@
 .burger {
-  width: 30px;
+  width: 40px;
   height: 20px;
   cursor: pointer;
 }
@@ -7,58 +7,82 @@
 .burger .line {
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: var(--accent-color-rosa);
   margin-bottom: 5px;
   transition: 0.2s linear;
+  border-radius: 20px;
 }
-.burger {
+
+.menu {
   display: none;
 }
-@media screen and (width < 800px) {
-  .menu {
-    display: none;
-  }
-  /* .logo {
-    flex: 0 0 50vw;
-  } */
+
+.burger {
+  display: block;
+  background-color: transparent;
+  border: 0;
+  flex: 0 0 auto;
+}
+.burger.active .line:nth-child(1) {
+  transform: rotate(30deg) translate(2px, 10px);
+  transition: 0.2s linear;
+  background-color: var(--hover-color-plum);
+}
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+  transition: 0.15s linear;
+  background-color: var(--hover-color-plum);
+}
+.burger.active .line:nth-child(3) {
+  transform: rotate(-30deg) translate(1px, -6px);
+  transition: 0.2s linear;
+  background-color: var(--hover-color-plum);
+}
+nav.active .menu {
+  display: block;
+  background-color: var(--burger-bg-color-creme);
+  position: absolute;
+  top: 3.6rem;
+  right: 0;
+  width: clamp(200px, 50vw, 400px);
+  margin-top: 8px;
+  margin-right: 10px;
+  padding-top: 40px;
+  border: 5px solid;
+  border-color: var(--accent-color-rosa);
+  padding-bottom: 20px;
+}
+
+header > nav li > a:after {
+  content: "";
+}
+nav.active .menu li {
+  margin: 0px 10px;
+}
+
+nav.active .menu .menuItem3 {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--header-color-brown);
+}
+
+nav.active .menu .menuItem2 {
+  margin-bottom: 1rem;
+}
+nav.active .menu .dropdown a {
+  font-size: 16px;
+}
+
+nav.active .menu li {
+  font-size: 18px;
+  font-family: var(--font-lalezar);
+  color: var(--hover-color-plum);
+  letter-spacing: 0.02em;
+}
+
+@media (width > 600px) {
   .burger {
-    display: block;
-    background-color: transparent;
-    border: 0;
-    flex: 0 0 auto;
-    /* margin: 0 20px; */
-  }
-  .burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.2s linear;
-  }
-  .burger.active .line:nth-child(2) {
-    opacity: 0;
-    transition: 0.15s linear;
-  }
-  .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-    transition: 0.2s linear;
-  }
-  nav.active .menu {
-    display: block;
-    background-color: var(--color-menu-bg);
-    position: absolute;
-    top: 3.6rem;
-    right: 0;
-    width: clamp(200px, 50vw, 400px);
-    z-index: 1;
-    opacity: 0.8;
-  }
-  header > nav li > a:after {
-    content: "";
-  }
-  nav.active .menu li {
-    margin: 40px 20px;
-    text-align: right;
-  }
-  nav.active .menu a {
-    font-size: 24px;
+    display: none;
   }
 }

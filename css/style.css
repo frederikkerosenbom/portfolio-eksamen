@@ -1,64 +1,14 @@
-/*********header**********/
-header {
-  padding: 1rem;
-  font-family: var(--font-lalezar);
-}
-
-header ul {
-  list-style: none;
-}
-header a {
-  text-decoration: none;
-  color: var(--hover-color-plum);
-}
-.logo a {
-  font-size: 30px;
-  color: var(--header-color-brown);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/*********main**********/
-main {
-  padding-inline: 1rem;
-}
-/*********footer**********/
-footer {
-  background-color: var(--footer-bg-color);
-  font-family: var(--font-lalezar);
-  color: var(--text-color-darkbrown);
+/*********forside**********/
+.velkomst {
   text-align: center;
-  padding-block: 1.5rem;
-  margin-bottom: none;
+  font-size: 14px;
+  margin: 2rem 1rem;
 }
 
-footer ul {
-  list-style: none;
-}
-
-footer ul a {
-  color: var(--text-color-darkbrown);
-}
-
-footer img {
-  width: 100px;
-  height: auto;
-  place-self: center;
-}
-
-/******************************/
-@media (width > 600px) {
-  /*********menu**********/
-  .menuItem1 {
-    display: none;
-  }
-  .menu {
-    display: flex;
-    align-items: center;
-  }
-  /******************************/
-}
+/*********om mig**********/
+/*********tema1**********/
+/*********tema2**********/
+/*********tema3**********/
+/*********tema4**********/
+/*********tema5**********/
+/*********tema6**********/
