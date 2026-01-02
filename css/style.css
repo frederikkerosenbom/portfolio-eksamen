@@ -1,8 +1,40 @@
 /*********forside**********/
+
+/*karrusel*/
+.karrusel-slide img {
+  height: 175px;
+  width: auto;
+}
+
+.karrusel-slide {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: carrusel 40s linear infinite;
+}
+
+.karrusel {
+  overflow: hidden;
+  margin-inline: 1.5rem;
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+@keyframes carrusel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/*****tekst*********/
 .velkomst {
   text-align: center;
-  font-size: 14px;
-  margin: 2rem 1rem;
+  font-weight: 600;
+  margin: 3rem 1rem;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #4e342e;
 }
 
 /*********om mig**********/

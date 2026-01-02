@@ -26,6 +26,10 @@ header a {
   justify-content: space-between;
 }
 
+header nav {
+  z-index: 1000;
+}
+
 /*********main**********/
 main {
   padding-inline: 1rem;
