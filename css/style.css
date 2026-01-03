@@ -38,6 +38,87 @@
 }
 
 /*********om mig**********/
+
+.om-mig1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-template-rows: 2fr 1fr 2fr;
+  margin-bottom: 2rem;
+}
+
+.om-mig1 .erfaring-link {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.om-mig1 .kompetence-link {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.om-mig1 img {
+  width: 160px;
+  height: auto;
+  border: 7px solid #d6a1b3;
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+
+.om-mig1 p {
+  align-self: center;
+  font-size: 14px;
+}
+.om-mig-tekst-p1 {
+  text-transform: uppercase;
+}
+.om-mig1 a {
+  font-weight: bold;
+  color: var(--accent-color-rosa);
+  text-decoration: underline;
+}
+
+.om-mig-tekst {
+  text-align: center;
+  margin-block: 2rem;
+}
+#mere-link {
+  font-weight: bold;
+  color: var(--accent-color-rosa);
+  text-decoration: underline;
+  font-family: var(--font-inter);
+}
+
+.om-mig-tekst p {
+  margin-bottom: 20px;
+}
+
+#mere {
+  margin-block: 1rem;
+}
+
+#erfaring,
+#learned,
+#kompetencer {
+  margin-block: 2.5rem;
+}
+
+#erfaring {
+  max-width: 260px;
+}
+
+#learned {
+  place-self: end;
+  text-align: right;
+  max-width: 260px;
+}
+
+/**husk media fjern underline normalt + dette under*/
+
+.om-mig1 a:hover {
+  color: var(--hover-color-plum);
+  text-decoration: underline;
+}
+/********/
+
 /*********tema1**********/
 /*********tema2**********/
 /*********tema3**********/

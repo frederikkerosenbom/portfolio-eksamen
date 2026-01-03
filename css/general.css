@@ -4,7 +4,7 @@ body {
 
 /*********header**********/
 header {
-  padding: 1rem;
+  padding: 1.5rem;
   font-family: var(--font-lalezar);
 }
 
@@ -32,7 +32,7 @@ header nav {
 
 /*********main**********/
 main {
-  padding-inline: 1rem;
+  padding-inline: 1.5rem;
 }
 /*********footer**********/
 footer {
@@ -72,10 +72,28 @@ footer img {
 }
 
 /********tekst*********/
+h1 {
+  font-family: var(--font-lalezar);
+  color: var(--text-color-darkbrown);
+}
+h2 {
+  font-family: var(--font-lalezar);
+  color: var(--text-color-darkbrown);
+  letter-spacing: 0.04em;
+}
 h3 {
+  font-family: var(--font-lalezar);
+  color: var(--text-color-darkbrown);
+
   font-size: 25px;
+}
+
+h4 {
+  font-family: var(--font-lalezar);
+  color: var(--text-color-darkbrown);
 }
 p {
   font-family: var(--font-inter);
   color: var(--text-color-darkbrown);
+  font-size: 14px;
 }
