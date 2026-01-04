@@ -1,4 +1,5 @@
 /*********forside**********/
+/*hero sektion*/
 
 /*karrusel*/
 .karrusel-slide img {
@@ -27,7 +28,7 @@
     transform: translateX(-50%);
   }
 }
-/*****tekst*********/
+/*tekst*/
 .velkomst {
   text-align: center;
   font-weight: 600;
@@ -39,7 +40,7 @@
   color: #4e342e;
 }
 
-/*****stack cards*********/
+/*stack cards*/
 .all-cards {
   width: 90%;
   margin: 0 auto;
@@ -313,12 +314,6 @@
   letter-spacing: 2px;
 }
 
-/**husk media fjern underline normalt + dette under*/
-
-.om-mig1 a:hover {
-  color: var(--hover-color-plum);
-  text-decoration: underline;
-}
 /********/
 
 /*********tema**********/
@@ -356,3 +351,66 @@
   font-size: 16px;
 }
 /*********tema6**********/
+/**husk media fjern underline normalt + dette under*/
+
+/*********desktop**********/
+@media (width > 600px) {
+  /*********forside**********/
+  /*hero sektion*/
+  /*karrusel*/
+  .karrusel {
+    mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+  }
+  .karrusel-slide img {
+    height: 265px;
+  }
+  /*tekst*/
+  .velkomst {
+    font-size: 20px;
+    width: 500px;
+    place-self: center;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+  /*sticky cards*/
+  .card-body {
+    padding-inline: 4rem;
+  }
+
+  #card1 .card-body h2,
+  #card1 .card-body p,
+  #card1 .card-body a,
+  #card2 .card-body h2,
+  #card2 .card-body p,
+  #card2 .card-body a,
+  #card3 .card-body h2,
+  #card3 .card-body p,
+  #card3 .card-body a,
+  #card4 .card-body h2,
+  #card4 .card-body p,
+  #card4 .card-body a,
+  #card5 .card-body h2,
+  #card5 .card-body p,
+  #card5 .card-body a {
+    text-align: start;
+  }
+  .card-body a {
+    place-self: start;
+    font-size: 20px;
+  }
+
+  .all-cards {
+    width: 75%;
+  }
+
+  /*********om mig**********/
+  .om-mig1 a {
+    text-decoration: none;
+  }
+  .om-mig1 a:hover {
+    color: var(--hover-color-plum);
+    text-decoration: underline;
+  }
+
+  /*********tema**********/
+}

@@ -41,7 +41,7 @@ footer {
   color: var(--text-color-darkbrown);
   text-align: center;
   padding-block: 1.5rem;
-  margin-bottom: none;
+  /* margin-bottom: none; */
 }
 
 footer ul {
@@ -59,17 +59,6 @@ footer img {
 }
 
 /******************************/
-@media (width > 600px) {
-  /*********menu**********/
-  .menuItem1 {
-    display: none;
-  }
-  .menu {
-    display: flex;
-    align-items: center;
-  }
-  /******************************/
-}
 
 /********tekst*********/
 h1 {
@@ -80,6 +69,7 @@ h2 {
   font-family: var(--font-lalezar);
   color: var(--text-color-darkbrown);
   letter-spacing: 0.04em;
+  font-size: 24px;
 }
 h3 {
   font-family: var(--font-lalezar);
@@ -96,4 +86,82 @@ p {
   font-family: var(--font-inter);
   color: var(--text-color-darkbrown);
   font-size: 14px;
+}
+
+@media (width > 600px) {
+  /*********menu**********/
+  .menuItem1 {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+
+  header a {
+    color: var(--accent-color-rosa);
+  }
+
+  .logo a {
+    font-size: 70px;
+  }
+
+  header a:hover {
+    color: var(--hover-color-plum);
+    text-decoration: underline;
+  }
+
+  nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  nav ul li a {
+    display: block;
+    padding: 5px 25px;
+    font-size: 30px;
+  }
+
+  nav ul li ul.dropdown li {
+    display: block;
+  }
+
+  nav ul li ul.dropdown {
+    width: 100%;
+    background-color: var(--burger-bg-color-creme);
+    border: 5px solid #8b3a5a;
+    position: absolute;
+    z-index: 999;
+    display: none;
+  }
+  nav ul li:hover ul.dropdown {
+    display: block;
+  }
+
+  .dropdown a {
+    font-size: 17px;
+  }
+
+  /******************************/
+  main {
+    padding-inline: 2.5rem;
+  }
+
+  footer h3 {
+    font-size: 40px;
+  }
+  footer li {
+    font-size: 20px;
+  }
+
+  footer img {
+    margin-top: 2rem;
+    width: 200px;
+  }
+  /**************tekst****************/
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 20px;
+  }
 }
