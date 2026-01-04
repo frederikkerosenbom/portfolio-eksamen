@@ -247,6 +247,72 @@
   max-width: 260px;
 }
 
+/**kompetencer**/
+.skills {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.top h2 {
+  letter-spacing: 0.02em;
+}
+
+.bar {
+  height: 12px;
+  border: 2px solid #2b1f1b;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent-color-rosa);
+  transition: width 0.25s linear;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.nav button {
+  border: none;
+  background: var(--accent-color-rosa);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.skills-card {
+  /* border: 4px solid #2b1f1b; */
+  background: var(--accent-color-rosa);
+  border-radius: 28px;
+  padding: 22px;
+}
+
+.skills-card h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.skills-card p {
+  margin: 0 0 16px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.stars {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
 /**husk media fjern underline normalt + dette under*/
 
 .om-mig1 a:hover {
