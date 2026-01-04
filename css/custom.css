@@ -8,4 +8,11 @@
   --footer-bg-color: #d6a1b3;
   --font-lalezar: "Lalezar";
   --font-inter: "Inter";
+
+  /**stack cards**/
+
+  --cards: 6;
+  --cardHeight: fit-content;
+  --cardTopPadding: 4.5em;
+  --cardMargin: 4vw;
 }

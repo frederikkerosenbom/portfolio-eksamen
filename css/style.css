@@ -31,12 +31,148 @@
 .velkomst {
   text-align: center;
   font-weight: 600;
-  margin: 3rem 1rem;
+  margin-inline: 1rem;
+  margin-top: 3rem;
+  margin-bottom: -1rem;
   font-size: 13px;
   letter-spacing: 0.02em;
   color: #4e342e;
 }
 
+/*****stack cards*********/
+.all-cards {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#cards {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  gap: var(--cardMargin);
+  /* padding-bottom: calc(var(--cards) * var(--cardTopPadding)); */
+  padding-bottom: 2rem;
+  margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+  /*variable*/
+  --index: 1;
+}
+
+#card2 {
+  --index: 2;
+}
+
+#card3 {
+  --index: 3;
+}
+
+#card4 {
+  --index: 4;
+}
+
+#card5 {
+  --index: 5;
+}
+
+#card6 {
+  --index: 6;
+}
+
+.card {
+  position: sticky;
+  top: 0;
+  padding-top: calc(var(--index) * var(--cardTopPadding));
+  text-transform: uppercase;
+}
+
+#card1 .card-body,
+#card3 .card-body,
+#card5 .card-body {
+  background-color: var(--accent-color-rosa);
+}
+
+#card1 .card-body h2,
+#card1 .card-body p,
+#card3 .card-body h2,
+#card3 .card-body p,
+#card5 .card-body h2,
+#card5 .card-body p,
+#card2 .card-body a,
+#card4 .card-body a {
+  color: var(--header-color-brown);
+  text-align: center;
+}
+
+#card2 .card-body,
+#card4 .card-body,
+#card6 .card-body {
+  background-color: var(--header-color-brown);
+}
+
+#card2 .card-body h2,
+#card2 .card-body p,
+#card4 .card-body h2,
+#card4 .card-body p,
+#card1 .card-body a,
+#card3 .card-body a,
+#card5 .card-body a {
+  color: var(--accent-color-rosa);
+  text-align: center;
+}
+
+.card-body {
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px 0 #2b1f1b;
+  height: var(--cardHeight);
+  place-self: center;
+}
+
+.card-body p {
+  margin-block: 10px;
+}
+
+.card-link {
+  padding-block: 10px;
+  padding-inline: 30px;
+  font-family: var(--font-inter);
+  font-weight: bold;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  width: fit-content;
+  place-self: center;
+  margin-top: 15px;
+}
+#card6 .card-body a {
+  color: var(--accent-color-rosa);
+  text-align: center;
+  font-family: var(--font-inter);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 25px;
+  padding-inline: 30px;
+}
+
+#card6 .card-body {
+  padding-block: 20px;
+}
+
+#card1 .card-link,
+#card3 .card-link,
+#card5 .card-link {
+  background-color: var(--header-color-brown);
+}
+#card2 .card-link,
+#card4 .card-link {
+  background-color: var(--accent-color-rosa);
+}
 /*********om mig**********/
 
 .om-mig1 {
