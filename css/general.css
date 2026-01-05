@@ -6,6 +6,7 @@ body {
 header {
   padding: 1.5rem;
   font-family: var(--font-lalezar);
+  padding-top: calc(env(safe-area-inset-top) + 1.5rem);
 }
 
 header ul {
@@ -63,29 +64,35 @@ footer img {
 /********tekst*********/
 h1 {
   font-family: var(--font-lalezar);
-  color: var(--text-color-darkbrown);
+  color: var(--header-color-brown);
 }
 h2 {
   font-family: var(--font-lalezar);
-  color: var(--text-color-darkbrown);
+  color: var(--header-color-brown);
   letter-spacing: 0.04em;
   font-size: 24px;
 }
 h3 {
   font-family: var(--font-lalezar);
-  color: var(--text-color-darkbrown);
+  color: var(--header-color-brown);
 
   font-size: 25px;
 }
 
 h4 {
   font-family: var(--font-lalezar);
-  color: var(--text-color-darkbrown);
+  color: var(--header-color-brown);
+  font-size: 18px;
 }
 p {
   font-family: var(--font-inter);
   color: var(--text-color-darkbrown);
   font-size: 14px;
+}
+
+/****/
+.hide {
+  display: none;
 }
 
 @media (width > 600px) {
