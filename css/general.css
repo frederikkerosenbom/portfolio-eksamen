@@ -1,5 +1,7 @@
 body {
   background-color: var(--bg-color-beige);
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /*********header**********/
@@ -34,6 +36,8 @@ header nav {
 /*********main**********/
 main {
   padding-inline: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 /*********footer**********/
 footer {
@@ -97,6 +101,9 @@ p {
 
 @media (width > 600px) {
   /*********menu**********/
+  header {
+    padding-bottom: 0.5rem;
+  }
   .menuItem1 {
     display: none;
   }
@@ -110,14 +117,16 @@ p {
   }
 
   .logo a {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   header a:hover {
     color: var(--hover-color-plum);
     text-decoration: underline;
   }
-
+  header .logo a:hover {
+    text-decoration: none;
+  }
   nav ul li {
     display: inline-block;
     position: relative;
@@ -165,10 +174,23 @@ p {
     width: 200px;
   }
   /**************tekst****************/
+  h1 {
+    font-size: 60px;
+  }
   h2 {
     font-size: 40px;
   }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 25px;
+  }
   p {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  a:hover {
+    color: var(--hover-color-plum);
   }
 }

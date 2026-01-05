@@ -1,6 +1,103 @@
 /*********forside**********/
 /*hero sektion*/
+/**animation 1***/
+.hero-box-styling {
+  width: 20%;
+  display: flex;
+  justify-self: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 80%;
+}
 
+.hero-box-styling2 {
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 80%;
+}
+
+.rise {
+  animation: rise 0.6s forwards;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/**animation 2***/
+.scaleUp {
+  /* kør kun én gang og bliv i slut-tilstand */
+  animation: scaleUp 0.8s ease-out forwards;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(5);
+  }
+}
+
+/**animation 3***/
+
+.moveUp {
+  animation: moveUp 0.8s forwards;
+  overflow: show;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-500%);
+  }
+}
+
+/**animation 4: nav***/
+.navigation-box {
+  border: 1px #2b1f1b;
+  overflow: hidden;
+}
+
+.navRise {
+  animation: navRise 0.6s forwards;
+}
+
+@keyframes navRise {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+/**animation 5: content***/
+.fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+.fadeInSlow {
+  animation: fadeIn 3s ease-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*karrusel*/
 .karrusel-slide img {
   height: 175px;
@@ -34,13 +131,18 @@
   font-weight: 600;
   margin-inline: 1rem;
   margin-top: 3rem;
-  margin-bottom: -1rem;
   font-size: 13px;
   letter-spacing: 0.02em;
   color: #4e342e;
 }
 
 /*stack cards*/
+.projekter-forside {
+  place-self: center;
+  margin-top: 2rem;
+  margin-bottom: -4rem;
+}
+
 .all-cards {
   width: 90%;
   margin: 0 auto;
@@ -328,6 +430,13 @@
 .tema-main {
   text-align: start;
 }
+.tema-h2-1 {
+  display: block;
+}
+
+.tema-h2-2 {
+  display: none;
+}
 
 .tema-main h2,
 .tema-main h1 {
@@ -411,6 +520,65 @@
 @media (width > 600px) {
   /*********forside**********/
   /*hero sektion*/
+  .hero-box-styling {
+    width: 20%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20%;
+  }
+
+  .hero-box-styling2 {
+    width: 20%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20%;
+    scale: 5;
+  }
+
+  @keyframes scaleUp {
+    from {
+      scale: 1;
+    }
+    to {
+      scale: 5;
+    }
+  }
+
+  @keyframes moveUp {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(-113%);
+    }
+  }
+
+  .navRise {
+    animation: navRise 0.5s forwards;
+  }
+
+  @keyframes navRise {
+    0% {
+      transform: translateY(70%);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.4;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  .fadeInSlow {
+    animation: fadeIn 30s ease-out forwards;
+  }
   /*karrusel*/
   .karrusel {
     mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
@@ -423,12 +591,16 @@
     font-size: 20px;
     width: 500px;
     place-self: center;
-    margin-top: 6rem;
+    margin-top: 3rem;
     margin-bottom: 4rem;
   }
   /*sticky cards*/
   .card-body {
     padding-inline: 4rem;
+  }
+
+  .card-body p {
+    font-size: 20px;
   }
 
   #card1 .card-body h2,
@@ -458,12 +630,64 @@
   }
 
   /*********om mig**********/
+  .om-mig1 {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    gap: 20px;
+    grid-template-rows: 2fr 1fr 2fr;
+    place-self: center;
+  }
+
+  .om-mig1 .erfaring-link {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    place-self: start end;
+  }
+  .om-mig1 .kompetence-link {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .om-mig1 img {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    place-self: center;
+    width: 220px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .om-mig1 p {
+    align-self: center;
+    font-size: 20px;
+  }
+
   .om-mig1 a {
     text-decoration: none;
+    font-size: 25px;
   }
   .om-mig1 a:hover {
     color: var(--hover-color-plum);
     text-decoration: underline;
+  }
+
+  .om-mig-tekst p {
+    margin-bottom: 10px;
+  }
+
+  #mere-link,
+  #mindre-link {
+    font-size: 20px;
+  }
+
+  #mere-link:hover,
+  #mindre-link:hover {
+    color: var(--hover-color-plum);
+  }
+
+  #erfaring,
+  #learned,
+  #kompetencer {
+    margin-block: 4.5rem;
   }
 
   #erfaring h2,
@@ -475,6 +699,8 @@
   .erfaring-tekst {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    gap: 20px;
+    width: 1100px;
   }
 
   .erfaring1 {
@@ -492,5 +718,132 @@
     grid-row: 3/4;
   }
 
+  #learned,
+  #erfaring {
+    place-self: center;
+  }
+  .lesson-tekst {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    gap: 20px;
+    width: 1100px;
+  }
+
+  .lesson1 {
+    grid-column: 2/5;
+    grid-row: 1/2;
+  }
+
+  .lesson2 {
+    grid-column: 3/6;
+    grid-row: 2/3;
+  }
+
+  .lesson3 {
+    grid-column: 4/7;
+    grid-row: 3/4;
+  }
+
+  .skills {
+    display: grid;
+    max-width: 1100px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px;
+    margin-bottom: 4rem;
+  }
+
+  .skills .top {
+    grid-column: 1/2;
+    padding-right: 3rem;
+  }
+  .skills .skills-card {
+    grid-column: 2/3;
+    margin-top: 4rem;
+    margin-left: 3rem;
+  }
+
+  .bar {
+    height: 16px;
+  }
+
+  .nav button {
+    width: 66px;
+    height: 66px;
+    font-size: 35px;
+  }
+
+  .skills-card h3 {
+    font-size: 30px;
+  }
   /*********tema**********/
+  .opgave-link {
+    font-size: 20px;
+  }
+
+  .opgave-link.is-scrolled {
+    width: 128%;
+  }
+
+  .tema-main img {
+    /* width: 400px; */
+    width: 100%;
+  }
+  .result,
+  .proces,
+  .learning {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 1100px;
+  }
+
+  .result h2,
+  .result div,
+  .learning h2,
+  .learning div {
+    margin-left: 2rem;
+  }
+  .proces h2,
+  .proces div {
+    margin-right: 2rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .proces img {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .result h2,
+  .proces h2,
+  .learning h2 {
+    text-align: start;
+  }
+  .result div,
+  .proces div,
+  .learning div {
+    text-align: start;
+  }
+
+  .tema-main div {
+    margin-block: 2rem;
+  }
+
+  .result a,
+  .proces a,
+  .learning a {
+    font-size: 16px;
+  }
+
+  .result-more,
+  .proces-more,
+  .learning-more {
+    margin-top: 7rem;
+  }
+  .tema-h2-1 {
+    display: none;
+  }
+
+  .tema-h2-2 {
+    display: block;
+  }
 }
