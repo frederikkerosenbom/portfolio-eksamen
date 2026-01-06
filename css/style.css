@@ -1004,4 +1004,8 @@ header {
     object-fit: cover;
     overflow: hidden;
   }
+
+  .opgave-link {
+    margin-bottom: 4rem;
+  }
 }
