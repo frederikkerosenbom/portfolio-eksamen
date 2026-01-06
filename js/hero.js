@@ -1,23 +1,39 @@
 const heroBox = document.querySelector(".hero-box");
 const heroImg = document.querySelector(".hero-img");
-const nav = document.querySelector("#forside .navigation");
+const navF = document.querySelector("#forside .navigation");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 const logo = document.querySelector("#forside .logo");
 const menu = document.querySelector("#forside .menu");
-const burger = document.querySelector("#forside .burger");
+const burgerF = document.querySelector("#forside .burger");
 const velkomst = document.querySelector(".velkomst");
 
 function hideAll() {
-  nav.classList.add("hide");
+  navF.classList.add("hide");
   main.classList.add("hide");
   footer.classList.add("hide");
   heroBox.classList.add("hero-box-styling");
 }
 
-hideAll();
-
 window.addEventListener("DOMContentLoaded", () => {
+  const skip = sessionStorage.getItem("skipHeroAnimation") === "1";
+
+  if (skip) {
+    sessionStorage.removeItem("skipHeroAnimation"); // så den kun skipper én gang
+
+    // Vis siden uden animation
+    navF.classList.remove("hide");
+    main.classList.remove("hide");
+    footer.classList.remove("hide");
+
+    // Sørger for hero står i "slut-state"
+    heroBox.classList.remove("hero-box-styling", "scaleUp", "hero-box-styling2", "moveUp");
+    heroImg.classList.remove("rise");
+
+    return;
+  }
+  hideAll();
+
   heroAnimation1();
   heroImg.addEventListener(
     "animationend",
@@ -28,6 +44,12 @@ window.addEventListener("DOMContentLoaded", () => {
     },
     { once: true }
   );
+});
+
+document.querySelectorAll('a[href="/"], a[href="index.html"], a[href="#forside"]').forEach((a) => {
+  a.addEventListener("click", () => {
+    sessionStorage.setItem("skipHeroAnimation", "1");
+  });
 });
 
 function heroAnimation1() {
@@ -54,19 +76,20 @@ function heroAnimation3() {
     if (event.animationName === "moveUp") {
       heroBox.classList.remove("hero-box-styling2");
       heroBox.classList.remove("moveUp");
+
       showNav();
     }
   });
 }
 
 function showNav() {
-  nav.classList.remove("hide"); // gør nav synlig
-  nav.classList.add("navigation-box"); // sætter din box styling
+  navF.classList.remove("hide"); // gør nav synlig
+  navF.classList.add("navigation-box"); // sætter din box styling
 
   // sæt animation på alle 3 samtidig
   logo.classList.add("navRise");
   menu.classList.add("navRise");
-  burger.classList.add("navRise");
+  burgerF.classList.add("navRise");
 
   // vis samtidig
   showContent();
@@ -77,8 +100,8 @@ function showNav() {
     function () {
       logo.classList.remove("navRise");
       menu.classList.remove("navRise");
-      burger.classList.remove("navRise");
-      nav.classList.remove("navigation-box");
+      burgerF.classList.remove("navRise");
+      navF.classList.remove("navigation-box");
     },
     { once: true }
   );
@@ -92,7 +115,7 @@ function showContent() {
   main.classList.add("fadeIn");
   footer.classList.add("fadeIn");
   velkomst.classList.add("fadeIn");
-
+  heroBox.classList.remove("hero-box");
   // når fadeIn er færdig → fjern fadeIn
   main.addEventListener(
     "animationend",

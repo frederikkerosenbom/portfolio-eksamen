@@ -1,6 +1,7 @@
 /*********forside**********/
 /*hero sektion*/
 /**animation 1***/
+
 .hero-box-styling {
   width: 20%;
   display: flex;
@@ -11,12 +12,13 @@
 }
 
 .hero-box-styling2 {
-  width: 100%;
+  width: 20%;
   display: flex;
   justify-self: center;
   position: relative;
   overflow: hidden;
   margin-top: 80%;
+  scale: 5;
 }
 
 .rise {
@@ -59,7 +61,7 @@
     transform: translateY(0%);
   }
   to {
-    transform: translateY(-500%);
+    transform: translateY(-570%);
   }
 }
 
@@ -275,6 +277,15 @@
 #card4 .card-link {
   background-color: var(--accent-color-rosa);
 }
+/*****/
+.karrusel,
+.velkomst,
+#forside h1,
+.card {
+  animation: textOpacityScroll linear forwards;
+  animation-timeline: view();
+  animation-range: entry exit;
+}
 /*********om mig**********/
 
 .om-mig1 {
@@ -425,8 +436,98 @@
 }
 
 /********/
+.om-mig1 img,
+.om-mig1 p,
+.om-mig-tekst p,
+.om-mig-tekst h4,
+.om-mig-tekst a,
+#erfaring h2,
+#erfaring p,
+#learned h2,
+#learned p,
+.skills h2,
+.skills div {
+  animation: textOpacityScroll linear forwards;
+  animation-timeline: view();
+  animation-range: entry exit;
+}
 
 /*********tema**********/
+/*********animationer på temasiderne**********/
+.tema-main img {
+  animation: imgScroll linear forwards;
+  animation-timeline: view();
+  animation-range: normal;
+}
+
+@keyframes imgScroll {
+  0% {
+    opacity: 0;
+    scale: 0.8;
+  }
+
+  20% {
+    opacity: 1;
+    scale: 1;
+  }
+
+  80% {
+    opacity: 1;
+    scale: 1;
+  }
+
+  100% {
+    opacity: 0;
+    scale: 1;
+  }
+}
+
+.tema-main h2,
+.tema-main p,
+.result a,
+.proces a,
+.learning a,
+.tema-main h1 {
+  animation: textOpacityScroll linear forwards;
+  animation-timeline: view();
+  animation-range: entry exit;
+}
+
+@keyframes textOpacityScroll {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+header,
+.navigation {
+  animation: textOpacityScrollHeader linear forwards;
+  animation-timeline: view();
+  animation-range: exit;
+}
+
+@keyframes textOpacityScrollHeader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*******/
 .tema-main {
   text-align: start;
 }
@@ -501,11 +602,7 @@
   font-family: var(--font-inter);
   font-size: 14px;
 }
-/*********tema1**********/
 
-/*********tema2**********/
-/*********tema3**********/
-/*********tema4**********/
 /*********tema5**********/
 .tema5-link {
   color: var(--accent-color-rosa);
@@ -513,8 +610,6 @@
   font-weight: bold;
   font-size: 16px;
 }
-/*********tema6**********/
-/**husk media fjern underline normalt + dette under*/
 
 /*********desktop**********/
 @media (width > 600px) {
