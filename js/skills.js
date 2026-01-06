@@ -78,3 +78,11 @@ document.getElementById("next").addEventListener("click", () => {
 });
 
 render();
+
+burger.addEventListener("click", hideLink);
+function hideLink() {
+  const hide = burger.classList.contains("active");
+
+  erfaringLink.classList.toggle("hide", hide);
+  kompetenceLink.classList.toggle("hide", hide);
+}

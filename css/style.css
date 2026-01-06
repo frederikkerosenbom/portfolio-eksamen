@@ -447,10 +447,8 @@
 
 /********/
 .om-mig1 img,
-.om-mig1 p,
 .om-mig-tekst p,
 .om-mig-tekst h4,
-.om-mig-tekst a,
 #erfaring h2,
 #erfaring p,
 #learned h2,
@@ -463,7 +461,9 @@
 }
 
 .skills h2,
-.skills div {
+.skills div,
+.om-mig-tekst a,
+.om-mig1 p {
   animation: textOpacityScroll linear forwards;
   animation-timeline: view();
   animation-range: entry exit;
@@ -617,14 +617,19 @@ header {
 .opgave-link.is-scrolled {
   background: #f8f3ef;
   z-index: 1000;
-  width: 120%;
+  width: 113%;
   padding-block: 10px;
+}
+
+.proces img {
+  height: 230px;
+  object-fit: cover;
 }
 
 .tema5-link.is-scrolled {
   background: #f8f3ef;
   z-index: 1000;
-  width: 120%;
+  width: 113%;
   padding-block: 10px;
 }
 
@@ -762,6 +767,19 @@ header {
 
   .all-cards {
     width: 75%;
+  }
+
+  #card1 .card-link,
+  #card3 .card-link,
+  #card5 .card-link {
+    background-color: var(--header-color-brown);
+  }
+  #card2 .card-link,
+  #card4 .card-link {
+    background-color: var(--accent-color-rosa);
+  }
+  .card a:hover {
+    text-decoration: underline;
   }
 
   /*********om mig**********/
@@ -960,7 +978,7 @@ header {
   }
 
   .tema-main div {
-    margin-block: 2rem;
+    margin-block: 1rem;
   }
 
   .result a,
@@ -980,5 +998,10 @@ header {
 
   .tema-h2-2 {
     display: block;
+  }
+  .proces img {
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
   }
 }

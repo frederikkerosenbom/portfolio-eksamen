@@ -68,6 +68,7 @@ footer img {
 h1 {
   font-family: var(--font-lalezar);
   color: var(--header-color-brown);
+  font-size: 32px;
 }
 h2 {
   font-family: var(--font-lalezar);
