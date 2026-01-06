@@ -43,10 +43,9 @@ main {
 footer {
   background-color: var(--footer-bg-color);
   font-family: var(--font-lalezar);
-  color: var(--text-color-darkbrown);
+  color: var(--header-color-brown);
   text-align: center;
   padding-block: 1.5rem;
-  /* margin-bottom: none; */
 }
 
 footer ul {
@@ -54,7 +53,7 @@ footer ul {
 }
 
 footer ul a {
-  color: var(--text-color-darkbrown);
+  color: var(--header-color-brown);
 }
 
 footer img {

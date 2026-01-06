@@ -280,11 +280,21 @@
 /*****/
 .karrusel,
 .velkomst,
-#forside h1,
+#forside h1 {
+  animation: textOpacityScroll linear forwards;
+  animation-timeline: view();
+  animation-range: entry exit;
+  position: relative;
+  z-index: -1;
+}
 .card {
   animation: textOpacityScroll linear forwards;
   animation-timeline: view();
   animation-range: entry exit;
+}
+
+#card1 {
+  animation: none;
 }
 /*********om mig**********/
 
@@ -444,7 +454,14 @@
 #erfaring h2,
 #erfaring p,
 #learned h2,
-#learned p,
+#learned p {
+  animation: textOpacityScroll linear forwards;
+  animation-timeline: view();
+  animation-range: entry exit;
+  position: relative;
+  z-index: -1;
+}
+
 .skills h2,
 .skills div {
   animation: textOpacityScroll linear forwards;
@@ -458,6 +475,8 @@
   animation: imgScroll linear forwards;
   animation-timeline: view();
   animation-range: normal;
+  position: relative;
+  z-index: -1;
 }
 
 @keyframes imgScroll {
@@ -484,10 +503,17 @@
 
 .tema-main h2,
 .tema-main p,
+.tema-main h1 {
+  animation: textOpacityScroll linear forwards;
+  animation-timeline: view();
+  animation-range: entry exit;
+  position: relative;
+  z-index: -1;
+}
+
 .result a,
 .proces a,
-.learning a,
-.tema-main h1 {
+.learning a {
   animation: textOpacityScroll linear forwards;
   animation-timeline: view();
   animation-range: entry exit;
@@ -510,8 +536,7 @@
     opacity: 0;
   }
 }
-header,
-.navigation {
+header {
   animation: textOpacityScrollHeader linear forwards;
   animation-timeline: view();
   animation-range: exit;
@@ -531,6 +556,7 @@ header,
 .tema-main {
   text-align: start;
 }
+
 .tema-h2-1 {
   display: block;
 }
@@ -558,6 +584,21 @@ header,
   justify-self: center;
   text-align: center;
 }
+
+.tema5-link {
+  color: var(--accent-color-rosa);
+  font-family: var(--font-inter);
+  font-weight: bold;
+  font-size: 16px;
+
+  position: sticky;
+  top: 0px;
+  background: transparent;
+  display: block;
+  justify-self: center;
+  text-align: center;
+}
+
 .tema-main .link-bg {
   position: sticky;
   top: 0px;
@@ -570,10 +611,17 @@ header,
   top: 0px;
   background: transparent;
   margin-top: -35px;
-  padding-top: calc(env(safe-area-inset-top) + 20px);
+  padding-top: calc(env(safe-area-inset-top) + 30px);
 }
 
 .opgave-link.is-scrolled {
+  background: #f8f3ef;
+  z-index: 1000;
+  width: 120%;
+  padding-block: 10px;
+}
+
+.tema5-link.is-scrolled {
   background: #f8f3ef;
   z-index: 1000;
   width: 120%;
@@ -601,14 +649,6 @@ header,
   text-decoration: underline;
   font-family: var(--font-inter);
   font-size: 14px;
-}
-
-/*********tema5**********/
-.tema5-link {
-  color: var(--accent-color-rosa);
-  font-family: var(--font-inter);
-  font-weight: bold;
-  font-size: 16px;
 }
 
 /*********desktop**********/

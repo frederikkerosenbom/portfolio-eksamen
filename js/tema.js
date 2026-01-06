@@ -92,13 +92,16 @@ mindreLink3.addEventListener("click", (e) => {
 //////////opgavelink//////////
 const opgaveLink = document.querySelector(".opgave-link");
 const bgLink = document.querySelector(".link-bg");
+const linkFem = document.querySelector(".tema5-link");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 10) {
+  if (window.scrollY > 90) {
     opgaveLink.classList.add("is-scrolled");
+    linkFem.classList.add("is-scrolled");
     bgLink.classList.add("is-scrolled");
   } else {
     opgaveLink.classList.remove("is-scrolled");
+    linkFem.classList.remove("is-scrolled");
     bgLink.classList.remove("is-scrolled");
   }
 });
