@@ -1,4 +1,5 @@
 const slides = [
+  //liste over indholdet i de forskellige bokse
   {
     title: "01 Adobe Illustrator",
     text: "Jeg havde ikke arbejdet med Illustrator før studiet, men føler, at jeg har lært rigtig meget. Jeg er blevet sikker i de grundlæggende værktøjer og arbejdsgange, og det går hurtigt for mig at arbejde i programmet. Jeg ved godt, at der er mange flere muligheder, end jeg kan endnu, men jeg føler mig tryg i det, vi har arbejdet med indtil videre.",
@@ -51,22 +52,23 @@ const pageEl = document.getElementById("page");
 const totalEl = document.getElementById("total");
 const barFill = document.getElementById("barFill");
 
-totalEl.textContent = slides.length;
+totalEl.textContent = slides.length; //viser hvor mange slides der er - bruges til at vise hvor langt man er
 
 function render() {
-  const s = slides[index];
+  const s = slides[index]; //gør at vi finder det rigtige slide, så hvis index er 1, viser den indhold fra slide 1
 
-  titleEl.textContent = s.title;
+  titleEl.textContent = s.title; //henter den rigtige titel ud fra index
   textEl.textContent = s.text;
 
-  pageEl.textContent = index + 1;
+  pageEl.textContent = index + 1; //vi har ikke 0, så vi adderer med 1
 
-  const pct = ((index + 1) / slides.length) * 100;
-  barFill.style.width = pct + "%";
+  const pct = ((index + 1) / slides.length) * 100; //regner ud hvor langt vi er dvs. index(nummer slide) divideret med hvor mange slides der er i alt gange med 100 for at det giver procent delen
+  barFill.style.width = pct + "%"; //her tilføjer den vores udregning på barens fylde
 
-  starsEl.textContent = "★".repeat(s.stars) + "☆".repeat(5 - s.stars);
+  starsEl.textContent = "★".repeat(s.stars) + "☆".repeat(5 - s.stars); //her tager den værdiren af stars i slides og viser det i sorte stjerner og så ligger den tomme stjerne til op til 5
 }
 
+//knapperne bruger matematik, til at finde frem og tilbage
 document.getElementById("prev").addEventListener("click", () => {
   index = (index - 1 + slides.length) % slides.length; // loop tilbage
   render();
@@ -79,6 +81,7 @@ document.getElementById("next").addEventListener("click", () => {
 
 render();
 
+//dette er til links i toppen, da de har animation view() på, ligger de sig over burgermenuen. jeg har nu gjort så de forsvinder, når den er aktiv, da det er den bedste løsning jeg kunne finde
 burger.addEventListener("click", hideLink);
 function hideLink() {
   const hide = burger.classList.contains("active");

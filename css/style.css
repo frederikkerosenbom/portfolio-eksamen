@@ -124,7 +124,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Flytter elementet til venstre med 50% af sin bredde - bruges når man har to ens blokke*/
   }
 }
 /*tekst*/
