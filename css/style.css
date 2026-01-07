@@ -2,20 +2,17 @@
 /*hero sektion*/
 /**animation 1***/
 
-#forside .hero-box {
-  display: flex;
-  justify-self: center;
-  margin: none;
-}
-
 .hero-box-styling {
   width: 20%;
-  /* display: flex;
-  justify-self: center; */
+  display: flex;
+  justify-self: center;
   position: relative;
   overflow: hidden;
-  margin: none;
-  margin-top: 80%;
+  position: fixed;
+  left: 40%;
+  top: 45%;
+
+  transform-origin: center;
 }
 
 .hero-box-styling2 {
@@ -24,9 +21,12 @@
   justify-self: center;
   position: relative;
   overflow: hidden;
-  margin: none;
-  margin-top: 80%;
-  scale: 5;
+  position: fixed;
+  left: 40%;
+  top: 45%;
+
+  transform-origin: center;
+  scale: 4.5;
 }
 
 .rise {
@@ -53,7 +53,7 @@
     scale: 1;
   }
   to {
-    scale: 5;
+    scale: 4.5;
   }
 }
 
@@ -61,15 +61,12 @@
 
 .moveUp {
   animation: moveUp 0.8s forwards;
-  overflow: show;
+  overflow: visible;
 }
 
 @keyframes moveUp {
-  from {
-    transform: translateY(0%);
-  }
   to {
-    transform: translateY(-570%);
+    top: 5%;
   }
 }
 
@@ -668,11 +665,59 @@ header {
 @media (width > 600px) {
   /*********forside**********/
   /*hero sektion*/
+
+  /* .hero-box-styling {
+    width: 20%;
+    display: flex;
+    justify-self: center;
+    position: relative;
+    overflow: hidden;
+    position: fixed;
+    left: 40%;
+    top: 45%;
+    
+    transform-origin: center;
+  }
+
+  .hero-box-styling2 {
+    width: 20%;
+    display: flex;
+    justify-self: center;
+    position: relative;
+    overflow: hidden;
+    position: fixed;
+    left: 40%;
+    top: 45%;
+  
+    transform-origin: center;
+    scale: 4.5;
+  } */
   .hero-box-styling {
     width: 20%;
     display: flex;
     justify-self: center;
-    justify-content: center;
+    position: fixed;
+    left: 40%;
+    top: 50%;
+    overflow: hidden;
+    transform-origin: center;
+  }
+
+  .hero-box-styling2 {
+    width: 20%;
+    display: flex;
+    justify-self: center;
+    position: fixed;
+    left: 40%;
+    top: 50%;
+    overflow: hidden;
+    scale: 4.8;
+    transform-origin: center;
+  }
+  /* .hero-box-styling {
+    width: 20%;
+    display: flex;
+    justify-self: center;
     position: relative;
     overflow: hidden;
     margin-top: 20%;
@@ -682,19 +727,32 @@ header {
     width: 20%;
     display: flex;
     justify-self: center;
-    justify-content: center;
     position: relative;
     overflow: hidden;
     margin-top: 20%;
     scale: 5;
-  }
+  } */
 
-  @keyframes moveUp {
+  /* @keyframes moveUp {
     from {
       transform: translateY(0%);
     }
     to {
       transform: translateY(-113%);
+    }
+  } */
+  @keyframes moveUp {
+    to {
+      top: 14%;
+    }
+  }
+
+  @keyframes scaleUp {
+    from {
+      scale: 1;
+    }
+    to {
+      scale: 4.8;
     }
   }
 
