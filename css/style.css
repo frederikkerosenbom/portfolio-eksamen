@@ -190,7 +190,10 @@
 
 #card6 {
   --index: 6;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  padding-inline: auto;
 }
 
 .card {
@@ -301,6 +304,10 @@
 
 #card1 {
   animation: none;
+}
+
+.card-link {
+  margin-inline: auto;
 }
 /*********om mig**********/
 
@@ -791,7 +798,9 @@ header {
   .card a:hover {
     text-decoration: underline;
   }
-
+  .card-link {
+    margin-inline: 2px;
+  }
   /*********om mig**********/
   .om-mig1 {
     display: grid;

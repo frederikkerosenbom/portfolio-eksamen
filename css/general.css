@@ -46,7 +46,6 @@ footer {
   color: var(--header-color-brown);
   text-align: center;
   padding-block: 1.5rem;
-  align-items: center;
 }
 
 footer ul {
@@ -61,6 +60,7 @@ footer img {
   width: 100px;
   height: auto;
   place-self: center;
+  margin-inline: auto;
 }
 
 /******************************/
