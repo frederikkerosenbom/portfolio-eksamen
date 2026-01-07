@@ -5,6 +5,7 @@
 #forside .hero-box {
   display: flex;
   justify-self: center;
+  margin: none;
 }
 
 .hero-box-styling {
@@ -13,6 +14,7 @@
   justify-self: center; */
   position: relative;
   overflow: hidden;
+  margin: none;
   margin-top: 80%;
 }
 
@@ -22,6 +24,7 @@
   justify-self: center;
   position: relative;
   overflow: hidden;
+  margin: none;
   margin-top: 80%;
   scale: 5;
 }
