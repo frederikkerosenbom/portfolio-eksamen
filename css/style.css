@@ -148,6 +148,8 @@
   place-self: center;
   margin-top: 2rem;
   margin-bottom: -4rem;
+  display: flex;
+  justify-self: center;
 }
 
 .all-cards {
@@ -259,6 +261,7 @@
   text-decoration: none;
   font-size: 14px;
   display: flex;
+  justify-self: center;
   width: fit-content;
   place-self: center;
   margin-top: 15px;
@@ -306,9 +309,6 @@
   animation: none;
 }
 
-.card-link {
-  margin-inline: auto;
-}
 /*********om mig**********/
 
 .om-mig1 {
@@ -799,7 +799,7 @@ header {
     text-decoration: underline;
   }
   .card-link {
-    margin-inline: 2px;
+    justify-self: start;
   }
   /*********om mig**********/
   .om-mig1 {

@@ -61,6 +61,8 @@ footer img {
   height: auto;
   place-self: center;
   margin-inline: auto;
+  display: flex;
+  justify-self: center;
 }
 
 /******************************/
