@@ -145,11 +145,12 @@
 
 /*stack cards*/
 .projekter-forside {
-  place-self: center;
   margin-top: 2rem;
   margin-bottom: -4rem;
   display: flex;
   justify-self: center;
+  place-self: center;
+  text-align: center;
 }
 
 .all-cards {
@@ -251,6 +252,10 @@
 .card-body p {
   margin-block: 10px;
 }
+.card-body a {
+  display: flex;
+  justify-self: center;
+}
 
 .card-link {
   padding-block: 10px;
@@ -265,6 +270,7 @@
   width: fit-content;
   place-self: center;
   margin-top: 15px;
+  text-align: center;
 }
 #card6 .card-body a {
   color: var(--accent-color-rosa);
