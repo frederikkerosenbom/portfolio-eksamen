@@ -190,6 +190,7 @@
 
 #card6 {
   --index: 6;
+  align-items: center;
 }
 
 .card {
