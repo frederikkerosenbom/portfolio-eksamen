@@ -2,10 +2,15 @@
 /*hero sektion*/
 /**animation 1***/
 
-.hero-box-styling {
-  width: 20%;
+#forside .hero-box {
   display: flex;
   justify-self: center;
+}
+
+.hero-box-styling {
+  width: 20%;
+  /* display: flex;
+  justify-self: center; */
   position: relative;
   overflow: hidden;
   margin-top: 80%;
