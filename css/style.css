@@ -252,10 +252,6 @@
 .card-body p {
   margin-block: 10px;
 }
-.card-body a {
-  display: flex;
-  justify-self: center;
-}
 
 .card-link {
   padding-block: 10px;
